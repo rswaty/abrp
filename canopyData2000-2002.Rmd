@@ -1,0 +1,56 @@
+---
+title: "playing with 2000-2002"
+author: "Randy Swaty"
+date: "11/24/2020"
+output:
+  html_document:
+    number_sections: no
+    theme: journal
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      toc_collapsed: yes
+
+---
+<style>
+body {
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+---
+
+
+## The basics...
+
+Laura Roncal wisely suggested we pilot processing of the ABRP data.  We discussed and decided to:
+
+* divide and conquer, with Randy taking on the "Canopy" data, and Laura the "Pine" data.  After that we'd make a decision about the "herb" data
+* start with 2000-2002 data
+* I created a new Excel Workbook and :
+    * made three sheets: data, headers (see note below) and notes
+    * pasted all "metadata" from each year in the "headers" sheet
+    * pasted data in chronological order in "data" sheet
+    * visually inspected data and headers
+    
+    
+## Notes 
+
+* "headers" is not the best name...should be "legend" or "metadata"
+* 
+
+
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+```
+
+
+```{r}
+canopy2000_2002 <- read_csv("canopy2000-2002.csv")
+View(canopy2000_2002)
+```
